@@ -16,11 +16,12 @@ function pullInfo() {
     num = $("#number").val();
     bDate = $("#begin").val();
     eDate = $("#end").val();
+
     url += '?' + $.param({
         'api-key': apiKey,
         'q': q,
-        'begin_date': bDate,
-        'end_date': eDate
+        'begin_date': bDate + "0101",
+        'end_date': eDate + "0101"
     });
     //ajax call
     $.ajax({
@@ -31,7 +32,15 @@ function pullInfo() {
     }).fail(function (err) {
         throw err;
     });
-};
+    for (var i = 0; i < num; i++) {
+        var newArticle = $("<div>");
+        newArticle.
+
+    };
+    
+}
+
+
 $(document).on("click", "#search", pullInfo);
 //make url
 
@@ -42,3 +51,4 @@ $(document).on("click", "#search", pullInfo);
 //display info
 
 //clear #clear
+
