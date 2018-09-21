@@ -52,6 +52,18 @@ function pullInfo() {
 }
 
 $(document).on("click", "#search", pullInfo);
+
+function clearFields() {
+    $("#query").empty()
+    $("#begin").empty()
+    $("#end").empty()
+}
+
+$(document).on("click", "#clear", clearFields);
+
+
+
+
 //make url
 
 
