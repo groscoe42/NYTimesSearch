@@ -61,16 +61,4 @@ function clearFields() {
 
 $(document).on("click", "#clear", clearFields);
 
-
-
-
-//make url
-
-
-
-
-
-//display info
-
-//clear #clear
-
+//comment for example
