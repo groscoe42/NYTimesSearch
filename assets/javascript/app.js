@@ -54,9 +54,9 @@ function pullInfo() {
 $(document).on("click", "#search", pullInfo);
 
 function clearFields() {
-    $("#query").empty()
-    $("#begin").empty()
-    $("#end").empty()
+    $("#query").val("")
+    $("#begin").val("")
+    $("#end").val("")
 }
 
 $(document).on("click", "#clear", clearFields);
