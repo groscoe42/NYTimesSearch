@@ -16,28 +16,29 @@ function pullInfo() {
     num = $("#number").val();
     bDate = $("#begin").val();
     eDate = $("#end").val();
+    url += '?' + $.param({
+        'api-key': apiKey,
+        'q': q,
+        'begin_date': bDate,
+        'end_date': eDate
+    });
+    //ajax call
+    $.ajax({
+        url: url,
+        method: 'GET',
+    }).then(function (result) {
+        console.log(result);
+    }).fail(function (err) {
+        throw err;
+    });
 };
 $(document).on("click", "#search", pullInfo);
 //make url
-url += '?' + $.param({
-    'api-key': apiKey,
-    'q': q,
-    'begin_date': bDate,
-    'end_date': eDate
-});
-//ajax call
-$.ajax({
-    url: url,
-    method: 'GET',
-}).then(function (result) {
-    console.log(result);
-}).fail(function (err) {
-    throw err;
-});
+
 
 
 
 
 //display info
 
-//clear
+//clear #clear
